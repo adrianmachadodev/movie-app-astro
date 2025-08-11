@@ -1,0 +1,20 @@
+---
+import { MOVIES } from "../consts/movies";
+import type { Movies } from "../types/movies";
+
+const dataMovies = Array(MOVIES.find(movie => movie.rating > 9));
+
+console.log('dataMovie', dataMovies);
+---
+
+<div class="flex flex-row w-full min-h-80 bg-amber-800 justify-center">
+  <div class="flex flex-row w-2xl h-80 bg-cyan-300 rounded-2xl">
+    {
+      dataMovies.map((item: any) => (
+        <picture >
+          <img class="object-contain" src={item.poster} alt="movie" />
+        </picture>
+      ))
+    }
+  </div>
+</div>

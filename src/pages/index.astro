@@ -1,5 +1,8 @@
 ---
+import MovieRecommend from '../components/MovieRecommend.astro';
+import WatchMore from '../components/WatchMore.astro';
 import Layout from '../layouts/Layout.astro';
+import Actors from '../components/Actors.astro'
 import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,4 +10,7 @@ import "../styles/global.css";
 ---
 
 <Layout>
+    <MovieRecommend/>
+    <Actors/>
+    <WatchMore/>
 </Layout>
