@@ -71,7 +71,7 @@ export const MOVIES: Movies[] = [
     year: 1994,
     genre: ["Drama"],
     rating: 9.3,
-    poster: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    poster: "https://resizing.flixster.com/tdMXmsVnR-vIj4Q5IACpEZ7O1ak=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p15987_v_h8_au.jpg",
   },
   {
     id: 10,

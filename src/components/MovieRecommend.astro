@@ -2,18 +2,21 @@
 import { MOVIES } from "../consts/movies";
 import type { Movies } from "../types/movies";
 
-const dataMovies = Array(MOVIES.find(movie => movie.rating > 9));
+const dataMovies = Array(MOVIES.find((movie) => movie.rating > 9));
 
-console.log('dataMovie', dataMovies);
+console.log("dataMovie", dataMovies);
 ---
 
-<div class="flex flex-row w-full min-h-80 bg-amber-800 justify-center">
+<div class="flex flex-row w-full min-h-80 bg-amber-800 justify-center p-8 relative">
   <div class="flex flex-row w-2xl h-80 bg-cyan-300 rounded-2xl">
     {
       dataMovies.map((item: any) => (
-        <picture >
-          <img class="object-contain" src={item.poster} alt="movie" />
+        <picture class="w-full h-full items-center justify-center">
+          <img class="w-full h-full object-cover rounded" src={item.poster} alt="movie" />
         </picture>
+        <div class="flex flex-col w-100 h-20 absolute bottom-9 text-white text-xl text-center font-bold justify-end">
+          <span>{item.title}</span>
+        </div>
       ))
     }
   </div>
