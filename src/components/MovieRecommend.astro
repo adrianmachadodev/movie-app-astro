@@ -1,23 +1,26 @@
 ---
 import { MOVIES } from "../consts/movies";
 import type { Movies } from "../types/movies";
+import NextMovie from "./NextMovie.astro";
 
-const dataMovies = Array(MOVIES.find((movie) => movie.rating > 9));
+const dataMovies = Array(MOVIES.find((movie) => movie.boxOffice > 9));
 
 console.log("dataMovie", dataMovies);
 ---
 
-<div class="flex flex-row w-full min-h-80 bg-amber-800 justify-center p-8 relative">
-  <div class="flex flex-row w-2xl h-80 bg-cyan-300 rounded-2xl">
+<div class="flex flex-col flex-wrap w-full min-h-80 bg-amber-800 justify-center p-8  items-center gap-6">
+  <div class="flex flex-row w-2xl h-80 bg-cyan-300 relative rounded-2xl">
     {
       dataMovies.map((item: any) => (
         <picture class="w-full h-full items-center justify-center">
           <img class="w-full h-full object-cover rounded" src={item.poster} alt="movie" />
         </picture>
-        <div class="flex flex-col w-100 h-20 absolute bottom-9 text-white text-xl text-center font-bold justify-end">
+        <div class="flex flex-col w-100 h-20 absolute bg-amber-200 bottom-0 text-white text-xl text-center font-bold justify-end">
           <span>{item.title}</span>
         </div>
       ))
     }
   </div>
+  
+  <NextMovie/>
 </div>
