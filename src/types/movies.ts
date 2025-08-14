@@ -3,7 +3,8 @@ export interface Movies{
     title:string;
     year:number;
     genre:string[];
-    // rating:number;
-    boxOffice?:number;
+    rating:number;
+    description:string;
+    cast:string[],
     poster:string;
 }

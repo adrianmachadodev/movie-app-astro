@@ -1,12 +1,30 @@
 ---
-import { MOVIES } from "../consts/movies"
+import { MOVIES } from "../consts/movies";
 
-const moviesNext = MOVIES.filter(movie => movie.year > 1999).splice(0,2)
-console.log('movienext', moviesNext);
+const moviesNext = MOVIES.filter((movie) => movie.rating >= 8).splice(0, 3);
+console.log("movienext", moviesNext);
 ---
+
 <div
-  class="flex flex-row bg-amber-900 w-2/4 min-h-40 justify-center items-center gap-3"
+  class="flex flex-row w-2/4 min-h-40 justify-center items-center gap-3"
 >
   <!-- Card next movie -->
-  <div class="flex flex-row w-80 h-40 bg-red-400 rounded-2xl"></div>
+  {
+    moviesNext.map((nextMovie: any) => (
+      <div class="flex flex-row w-80 h-40 bg-red-400 rounded-2xl">
+        <picture class="flex group flex-row w-80 h-40 bg-red-400 rounded-2xl overflow-hidden">
+          <img
+            class="w-[100%] h-[100%] group-hover:scale-105 group-hover:contrast-100 transition ease-in duration-200 rounded-2xl"
+            src={nextMovie.poster}
+            alt=""
+          />
+          <div class="flex flex-row absolute mt-9 w-80 h-30 group-hover:bg-neutral-500/50 transition ease-in items-center justify-center">
+            <p class="text-center opacity-0 group-hover:opacity-90 transition ease-in font-bold">
+              {nextMovie.title}
+            </p>
+          </div>
+        </picture>
+      </div>
+    ))
+  }
 </div>

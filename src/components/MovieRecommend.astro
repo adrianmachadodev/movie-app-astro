@@ -3,7 +3,7 @@ import { MOVIES } from "../consts/movies";
 import type { Movies } from "../types/movies";
 import NextMovie from "./NextMovie.astro";
 
-const dataMovies = Array(MOVIES.find((movie) => movie.boxOffice > 9));
+const dataMovies = Array(MOVIES.find((movie) => movie.rating == 7.8));
 
 console.log("dataMovie", dataMovies);
 ---
