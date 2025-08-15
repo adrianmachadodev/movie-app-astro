@@ -6,22 +6,23 @@ console.log("movienext", moviesNext);
 ---
 
 <div
-  class="flex flex-row w-2/4 min-h-40 justify-center items-center gap-3"
+  class="flex flex-row w-full min-h-40 justify-center items-center gap-3 flex-wrap"
 >
   <!-- Card next movie -->
   {
     moviesNext.map((nextMovie: any) => (
-      <div class="flex flex-row w-80 h-40 bg-red-400 rounded-2xl cursor-pointer">
+      <div class="flex flex-row  w-80 h-40 bg-red-400 rounded-2xl">
         <picture class="flex group flex-row w-full h-40 bg-red-400 rounded-2xl overflow-hidden">
           <img
             class="w-[100%] h-[100%] group-hover:scale-105 group-hover:contrast-100 transition ease-in duration-200 rounded-2xl"
             src={nextMovie.poster}
             alt=""
           />
-          <div class="flex flex-row absolute mt-9 w-80 h-30 group-hover:bg-neutral-500/50 transition ease-in items-center justify-center">
-            <p class="text-center opacity-0 group-hover:opacity-90 transition ease-in font-bold">
+          <div class="flex flex-col flex-wrap absolute mt-13 w-80 h-30 group-hover:bg-neutral-900/80 transition translate-y-0 group-hover:-translate-y-5 ease-in items-center justify-center rounded-b-2xl gap-1 mask-b-from-0">
+            <p class="text-center transition ease-in font-bold text-white">
               {nextMovie.title}
             </p>
+            <a href="#" class="w-40 h-10 opacity-0 group-hover:opacity-90  ease-in group-hover:bg-neutral-500/50 rounded-4xl font-bold text-center pt-2">More info</a>
           </div>
         </picture>
       </div>
