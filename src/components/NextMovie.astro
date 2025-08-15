@@ -11,8 +11,8 @@ console.log("movienext", moviesNext);
   <!-- Card next movie -->
   {
     moviesNext.map((nextMovie: any) => (
-      <div class="flex flex-row w-80 h-40 bg-red-400 rounded-2xl">
-        <picture class="flex group flex-row w-80 h-40 bg-red-400 rounded-2xl overflow-hidden">
+      <div class="flex flex-row w-80 h-40 bg-red-400 rounded-2xl cursor-pointer">
+        <picture class="flex group flex-row w-full h-40 bg-red-400 rounded-2xl overflow-hidden">
           <img
             class="w-[100%] h-[100%] group-hover:scale-105 group-hover:contrast-100 transition ease-in duration-200 rounded-2xl"
             src={nextMovie.poster}
