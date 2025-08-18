@@ -1,0 +1,15 @@
+---
+import type { GetStaticPaths } from "astro";
+import { MOVIES } from "../../consts/movies";
+
+const allMovies = MOVIES;
+
+export const getStaticPaths = (() => {
+    return MOVIES.map((movie:any) => ({
+        params:{id: movie.id}
+    }))
+});
+
+const id = Astro.params;
+console.log('id', id);
+---
