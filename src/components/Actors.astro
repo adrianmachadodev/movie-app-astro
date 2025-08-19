@@ -1,1 +1,14 @@
-<div class="flex flex-row w-full min-h-40 bg-amber-300"></div>
+---
+import { ACTORS } from "../consts/actors";
+
+import CardActors from "./cardActors.astro";
+
+console.log('actors', ACTORS);
+---
+<div class="flex flex-row w-full min-h-40 bg-amber-300">
+    {
+        ACTORS.map((item:any) => (
+            <CardActors image={item.image}/>
+        ))
+    }
+</div>
