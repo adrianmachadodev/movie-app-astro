@@ -7,7 +7,7 @@ const { image } = Astro.props;
 ---
 
 <div class="flex flex-row bg-red-300 w-40 h-40 rounded-full">
-  <picture class="object-contain">
-    <img src={image} class="w-full h-full rounded-full" alt="" />
+  <picture class="object-contain w-40 h-40 rounded-full">
+    <img src={image} class="w-full h-full rounded-full object-cover" alt="" />
   </picture>
 </div>

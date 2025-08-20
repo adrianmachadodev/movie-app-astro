@@ -3,12 +3,12 @@ import { ACTORS } from "../consts/actors";
 
 import CardActors from "./cardActors.astro";
 
-console.log('actors', ACTORS);
+console.log("actors", ACTORS);
 ---
-<div class="flex flex-row w-full min-h-40 bg-amber-300">
-    {
-        ACTORS.map((item:any) => (
-            <CardActors image={item.image}/>
-        ))
-    }
-</div>
+
+<section class="flex flex-col w-full gap-6">
+  <h3 class="bg-red-300">Celebrities</h3>
+  <div class="flex flex-row w-full min-h-40 bg-amber-300 overflow-x-scroll">
+    {ACTORS.map((item: any) => <CardActors image={item.image} />)}
+  </div>
+</section>
