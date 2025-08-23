@@ -6,17 +6,17 @@ import CardActors from "./cardActors.astro";
 console.log("actors", ACTORS);
 ---
 
-<section class="flex flex-col w-full gap-6 relative">
-  <h3 class="bg-red-300 text-center">Celebrities</h3>
+<section class="flex flex-col w-full gap-6 relative bg-neutral-900">
+  <h3 class="bg-neutral-900 text-center">Celebrities</h3>
   <div
     id="carousel"
-    class="flex flex-row w-full min-h-40 overflow-x-scroll scroll-smooth scrollbar-none hide-scroll"
+    class="flex flex-row w-full min-h-40 overflow-x-scroll scroll-smooth scrollbar-none hide-scroll gap-2"
   >
     {ACTORS.map((item: any) => <CardActors image={item.image} />)}
   </div>
   <div
     id="prev"
-    class="absolute top-1/2 left-2 -translate-y-0 w-12 h-12 bg-neutral-400/45 flex items-center justify-center rounded-full cursor-pointer"
+    class="absolute top-1/2 left-2 -translate-y-0 w-12 h-12  flex items-center justify-center rounded-full cursor-pointer"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
